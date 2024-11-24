@@ -1,0 +1,14 @@
+<%- include('../partials/header.ejs'); %> <%- include('../partials/nav.ejs'); %>
+<h1><%= title %></h1>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat
+  nobis possimus debitis! Aliquam consequatur non fuga minima harum repellat in
+  ducimus veritatis illum tempore, vero numquam pariatur dolore molestias!
+</p>
+<% if( posts.length > 0 ) { %> <% for( let p of posts ) { %> <% if( p.published
+) { %>
+<div class="single-post">
+  <h3><%= p.title %></h3>
+  <p><%= p.body %></p>
+</div>
+<% } %> <% } %> <% } %> <%- include("../partials/footer.ejs"); %>
